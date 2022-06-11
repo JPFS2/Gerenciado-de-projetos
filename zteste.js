@@ -1,7 +1,7 @@
 let projeto = [
-    {id: 1, nome: 'Projeto1'},
-    {id: 2, nome: 'Projeto2'},
-    {id: 3, nome: 'Projeto3'}
+    {id: 1, nome: 'Projeto1', team: '', tarefas: ''},
+    {id: 2, nome: 'Projeto2', team: '', tarefas: ''},
+    {id: 3, nome: 'Projeto3', team: '', tarefas: ''}
 ]
 
 let equipe = [
@@ -11,29 +11,24 @@ let equipe = [
 ]
 
 
-    const id = 2;
+const id = 2;
+const body = 3;
+let selectEquipe;
+let selectProjeto;
 
-    const body = 3;
 
-    equipe.forEach(function(a, b){
-        if(a.id === body) { 
-            let tt = equipe[b];
-        }
-        projeto.forEach(function(c, d){
-            if(c.id === id){
-                projeto[d].push(tt);
-            }
-        })
-    })
+equipe.forEach(function(a, b){
+    if(a.id === body) { 
+        selectEquipe = b;
+    }
+})
 
-    console.log(equipe[i]);
-    
+projeto.forEach(function(c, d){
+    if(c.id === id){
+        selectProjeto = d;
+    }
+})
 
-    /*
-    projeto.forEach(function(el, i){
-        if(el.id === id){
-            projeto[i].push(selcEquipe);
-        }
-    })
 
-    console.log(projeto);*/
+
+console.log(selectEquipe, projeto);
