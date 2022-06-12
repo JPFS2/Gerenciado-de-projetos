@@ -1,15 +1,22 @@
 const objetos = require('./objetos');
 const projeto = objetos.projeto;
 const equipe = objetos.equipe;
+const tarefa = objetos.tarefa;
 
 exports.projeto = (req, res) => {
-    const body = req.body;
-    projeto.push(body);
-    return res.json(body);
+    const info = req.body;
+    projeto.push(info);
+    return res.json(info);
 }
 
 exports.equipe = (req, res) => {
-    const body = req.body;
-    equipe.push(body);
-    return res.json(body);
+    const info = req.body;
+    equipe.push(info);
+    return res.json(info);
+}
+
+exports.tarefa = (req, res) => {
+    const info = req.body;
+    tarefa.push(info);
+    return res.json(info);
 }

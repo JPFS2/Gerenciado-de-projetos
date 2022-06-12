@@ -10,11 +10,33 @@ let equipe = [
     {id: 3, nome: 'Equipe3', integrantes: 'Nik, Mel, Karl, Titoo, Felix'}
 ]
 
+let tarefa = [
+    {id: 1, nome: 'Tarefa1'},
+    {id: 2, nome: 'Tarefa2'},
+    {id: 3, nome: 'Tarefa3'},
+    {id: 4, nome: 'Tarefa4'},
+    {id: 5, nome: 'Tarefa5'},
+    {id: 6, nome: 'Tarefa6'},
+    {id: 7, nome: 'Tarefa7'}
+]
+
 let idProjeto = 2;
 let idEquipe = 3;
+let idTarefa = 5;
 
 //projeto[idProjeto - 1].team.push('teste');
-console.log(projeto[idProjeto - 1]);
+
+console.log(projeto[idProjeto - 1].team = equipe[idEquipe - 1].nome);
+//console.log(projeto[idProjeto - 1].tarefas += tarefa[idTarefa - 1].nome);
+/*
+for(let i = 0; i < tarefa.length; i++){
+    projeto[idProjeto - 1].tarefas += tarefa[i].nome + ', ';
+}
+*/
+
+console.log(projeto);
+
+
 
 
 /*
