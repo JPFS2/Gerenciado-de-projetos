@@ -10,25 +10,19 @@ let equipe = [
     {id: 3, nome: 'Equipe3', integrantes: 'Nik, Mel, Karl, Titoo, Felix'}
 ]
 
+let idProjeto = 2;
+let idEquipe = 3;
 
-const id = 2;
-const body = 3;
-let selectEquipe;
-let selectProjeto;
+//projeto[idProjeto - 1].team.push('teste');
+console.log(projeto[idProjeto - 1]);
 
 
-equipe.forEach(function(a, b){
-    if(a.id === body) { 
-        selectEquipe = b;
+/*
+for(let i = 0; i < projeto.length; i++){
+    if(idProjeto === projeto[i].id){
+        projeto[i].team.push(equipe[idEquipe -1]);
     }
-})
+}
 
-projeto.forEach(function(c, d){
-    if(c.id === id){
-        selectProjeto = d;
-    }
-})
-
-
-
-console.log(selectEquipe, projeto);
+console.log(projeto);
+*/
