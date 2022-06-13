@@ -22,13 +22,3 @@ exports.equipe = (req, res) => {
 
     return res.json(equi);
 }
-
-exports.tarefa = (req, res) => {
-    const id = req.params.id;
-
-    const tar = tarefa.find(tare => tare.id == id);
-
-    if(!tar) return res.status(404).json();
-
-    return res.json(tar);
-}

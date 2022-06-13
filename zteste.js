@@ -1,7 +1,7 @@
 let projeto = [
     {id: 1, nome: 'Projeto1', team: '', tarefas: []},
-    {id: 2, nome: 'Projeto2', team: '', tarefas: ''},
-    {id: 3, nome: 'Projeto3', team: '', tarefas: ''}
+    {id: 2, nome: 'Projeto2', team: '', tarefas: []},
+    {id: 3, nome: 'Projeto3', team: '', tarefas: []}
 ]
 
 let equipe = [
@@ -20,6 +20,17 @@ let tarefa = [
     {id: 7, nome: 'Tarefa7'}
 ]
 
+
+projeto[2 - 1].tarefas.push(tarefa[2 - 1].nome);
+projeto[2 - 1].tarefas.push(tarefa[4 - 1].nome);
+projeto[2 - 1].tarefas.push(tarefa[1 - 1].nome);
+projeto[2 - 1].tarefas.push(tarefa[3 - 1].nome);
+projeto[2 - 1].tarefas.push(tarefa[7 - 1].nome);
+console.log(projeto[2 - 1].tarefas);
+projeto[2 - 1].tarefas.splice(3 - 1, 1);
+console.log(projeto[2 - 1].tarefas);
+
+
 //let idProjeto = 2;
 //let idEquipe = 3;
 //let idTarefa = 5;
@@ -34,6 +45,7 @@ for(let i = 0; i < tarefa.length; i++){
 }
 */
 
+/*
 id = 2;
 
 const proje = projeto.filter(proj => proj.id != id);
@@ -42,7 +54,7 @@ projeto = proje;
 
 console.log(projeto);
 
-
+*/
 
 
 /*

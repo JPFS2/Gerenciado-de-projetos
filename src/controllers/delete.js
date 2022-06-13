@@ -1,7 +1,6 @@
 const objetos = require('./objetos');
 let projeto = objetos.projeto;
 let equipe = objetos.equipe;
-let tarefa = objetos.tarefa;
 
 exports.projeto = (req, res) => {
     const id = req.params.id;
@@ -23,8 +22,10 @@ exports.equipe = (req, res) => {
 
 exports.tarefa = (req, res) => {
     const id = req.params.id;
-    
-    tarefa[id - 1] = null;
 
-    res.json(tarefa);
+    const tarefa = req.body;
+    
+    projeto[id - 1].tarefas.splice(tarefa - 1, 1);
+
+    res.json(projeto[id - 1].tarefas);
 }

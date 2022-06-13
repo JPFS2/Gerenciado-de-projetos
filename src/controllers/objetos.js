@@ -10,6 +10,7 @@ let equipe = [
     {id: 3, nome: 'Equipe3', integrantes: 'Nik, Mel, Karl, Titoo, Felix'}
 ]
 
+/*
 let tarefa = [
     {id: 1, nome: 'Tarefa1'},
     {id: 2, nome: 'Tarefa2'},
@@ -19,9 +20,10 @@ let tarefa = [
     {id: 6, nome: 'Tarefa6'},
     {id: 7, nome: 'Tarefa7'}
 ]
+*/
+
 
 module.exports = {
     projeto,
-    equipe,
-    tarefa
+    equipe
 }
