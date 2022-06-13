@@ -4,6 +4,7 @@ const obj = require('./src/controllers/objetos');
 const view = require('./src/controllers/buscar');
 const create = require('./src/controllers/create');
 const up = require('./src/controllers/up');
+const del = require('./src/controllers/delete');
 
 // Visualizar(buscar) Home
 route.get('/', (req, res) => {
@@ -21,10 +22,11 @@ route.post('/equipe', create.equipe);
 route.post('/tarefa', create.tarefa);
 
 // Adicionar
-route.put('/projeto:id/equipe:eid', up.equipe);
-
-
+route.put('/projeto/:id/equipe/:eid', up.equipe);
 
 // Excluindo
+route.delete('/projeto/:id', del.projeto);
+route.delete('/equipe/:id', del.equipe);
+route.delete('/tarefa/:id', del.tarefa);
 
 module.exports = route;

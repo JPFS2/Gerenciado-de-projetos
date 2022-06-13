@@ -12,6 +12,6 @@ exports.equipe = (req, res) => {
     
     projeto[id - 1].team = equipe[eid - 1].nome
 
-    return res.json(proje);
+    return res.json(projeto[id - 1]);
 }
 

@@ -1,5 +1,5 @@
 let projeto = [
-    {id: 1, nome: 'Projeto1', team: '', tarefas: ''},
+    {id: 1, nome: 'Projeto1', team: '', tarefas: []},
     {id: 2, nome: 'Projeto2', team: '', tarefas: ''},
     {id: 3, nome: 'Projeto3', team: '', tarefas: ''}
 ]
@@ -20,19 +20,25 @@ let tarefa = [
     {id: 7, nome: 'Tarefa7'}
 ]
 
-let idProjeto = 2;
-let idEquipe = 3;
-let idTarefa = 5;
+//let idProjeto = 2;
+//let idEquipe = 3;
+//let idTarefa = 5;
 
 //projeto[idProjeto - 1].team.push('teste');
 
-console.log(projeto[idProjeto - 1].team = equipe[idEquipe - 1].nome);
+//console.log(projeto[idProjeto - 1].team = equipe[idEquipe - 1].nome);
 //console.log(projeto[idProjeto - 1].tarefas += tarefa[idTarefa - 1].nome);
 /*
 for(let i = 0; i < tarefa.length; i++){
     projeto[idProjeto - 1].tarefas += tarefa[i].nome + ', ';
 }
 */
+
+id = 2;
+
+const proje = projeto.filter(proj => proj.id != id);
+    
+projeto = proje;
 
 console.log(projeto);
 
