@@ -1,34 +1,30 @@
 const objetos = require('./objetos');
-const projeto = objetos.projeto;
-const equipe = objetos.equipe;
-const tarefa = objetos.tarefa;
+let projeto = objetos.projeto;
+let equipe = objetos.equipe;
+let tarefa = objetos.tarefa;
 
 exports.projeto = (req, res) => {
     const id = req.params.id;
 
-    //proje = projeto.filter(proj => proj.id == id);
+    //projeto = projeto.filter(proj => proj.id != id);
 
-    //projeto[id - 1] = ''
+    projeto[id - 1] = null;
     
-    res.json(id);
+    res.json(projeto);
 }
 
 exports.equipe = (req, res) => {
     const id = req.params.id;
 
-    const equi = equipe.filter(equip => equip.id != id);
-    
-    equipe = equi;
+    equipe[id - 1] = null;
 
     res.json(equipe);
 }
 
 exports.tarefa = (req, res) => {
     const id = req.params.id;
-
-    const tar = tarefa.filter(tare => tare.id != id);
     
-    tarefa = tar;
+    tarefa[id - 1] = null;
 
     res.json(tarefa);
 }

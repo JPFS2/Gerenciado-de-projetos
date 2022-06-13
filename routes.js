@@ -23,6 +23,7 @@ route.post('/tarefa', create.tarefa);
 
 // Adicionar
 route.put('/projeto/:id/equipe/:eid', up.equipe);
+// route.put('/projeto/:id/equipe/:eid', up.tarefa);
 
 // Excluindo
 route.delete('/projeto/:id', del.projeto);
