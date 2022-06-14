@@ -1,7 +1,7 @@
 let projeto = [
-    {id: 1, nome: 'Projeto1', team: '', tarefas: ''},
-    {id: 2, nome: 'Projeto2', team: '', tarefas: ''},
-    {id: 3, nome: 'Projeto3', team: '', tarefas: ''}
+    {id: 1, nome: 'Projeto1', team: '', tarefas: []},
+    {id: 2, nome: 'Projeto2', team: '', tarefas: []},
+    {id: 3, nome: 'Projeto3', team: '', tarefas: []}
 ]
 
 let equipe = [

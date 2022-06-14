@@ -1,7 +1,7 @@
 const objetos = require('./objetos');
 const projeto = objetos.projeto;
 const equipe = objetos.equipe;
-const tarefa = objetos.tarefa;
+
 
 exports.projeto = (req, res) => {
     const id = req.params.id;

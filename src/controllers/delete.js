@@ -21,11 +21,10 @@ exports.equipe = (req, res) => {
 }
 
 exports.tarefa = (req, res) => {
-    const id = req.params.id;
+    const {id, tid} = req.params.id;
 
-    const tarefa = req.body;
     
-    projeto[id - 1].tarefas.splice(tarefa - 1, 1);
+    projeto[id - 1].tarefas.splice(tid - 1, 1);
 
     res.json(projeto[id - 1].tarefas);
 }
