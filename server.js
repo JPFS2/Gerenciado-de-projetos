@@ -7,7 +7,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.json());
 app.use(routs);
 
-app.listen(3000, () => {
-    console.log('Acessar http://localhost:3000');
+const host = '0.0.0.0'
+const port = process.env.PORT || 3000
+
+app.listen(port, host, () => {
+    console.log('Acessar https://git.heroku.com/dry-tundra-57760.git');
 })
+
 
