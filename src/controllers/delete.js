@@ -5,7 +5,9 @@ let equipe = objetos.equipe;
 exports.projeto = (req, res) => {
     const id = req.params.id;
 
-    //projeto = projeto.filter(proj => proj.id != id);
+    const proje = projeto.find(proj => proj.id == id);
+
+    if(!proje) return res.status(404).json();
 
     projeto[id - 1] = null;
     
@@ -15,16 +17,19 @@ exports.projeto = (req, res) => {
 exports.equipe = (req, res) => {
     const id = req.params.id;
 
+    const equip = equipe.find(equi => equi.id == id);
+
+    if(!equip) return res.status(404).json();
+
     equipe[id - 1] = null;
 
     res.json(equipe);
 }
 
 exports.tarefa = (req, res) => {
-    const {id, tid} = req.params.id;
-
+    const {id, tid} = req.params;
     
     projeto[id - 1].tarefas.splice(tid - 1, 1);
 
-    res.json(projeto[id - 1].tarefas);
+    res.json(projeto[id - 1]);
 }
